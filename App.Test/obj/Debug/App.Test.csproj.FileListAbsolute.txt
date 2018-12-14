@@ -1,0 +1,15 @@
+C:\Users\Lenovo\source\repos\App.Test\App.Test\bin\Debug\App.Test.exe.config
+C:\Users\Lenovo\source\repos\App.Test\App.Test\bin\Debug\App.Test.exe
+C:\Users\Lenovo\source\repos\App.Test\App.Test\bin\Debug\App.Test.pdb
+C:\Users\Lenovo\source\repos\App.Test\App.Test\bin\Debug\nunit.framework.dll
+C:\Users\Lenovo\source\repos\App.Test\App.Test\bin\Debug\WebDriver.dll
+C:\Users\Lenovo\source\repos\App.Test\App.Test\bin\Debug\WebDriver.Support.dll
+C:\Users\Lenovo\source\repos\App.Test\App.Test\bin\Debug\nunit.framework.pdb
+C:\Users\Lenovo\source\repos\App.Test\App.Test\bin\Debug\nunit.framework.xml
+C:\Users\Lenovo\source\repos\App.Test\App.Test\bin\Debug\WebDriver.xml
+C:\Users\Lenovo\source\repos\App.Test\App.Test\bin\Debug\WebDriver.Support.xml
+C:\Users\Lenovo\source\repos\App.Test\App.Test\obj\Debug\App.Test.csprojAssemblyReference.cache
+C:\Users\Lenovo\source\repos\App.Test\App.Test\obj\Debug\App.Test.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\App.Test\App.Test\obj\Debug\App.Test.csproj.CopyComplete
+C:\Users\Lenovo\source\repos\App.Test\App.Test\obj\Debug\App.Test.exe
+C:\Users\Lenovo\source\repos\App.Test\App.Test\obj\Debug\App.Test.pdb
