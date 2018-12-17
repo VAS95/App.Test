@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using App.Test.Helpers;
 using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Support.UI;
 
 namespace App.Test.QATests
 {
@@ -40,22 +43,26 @@ namespace App.Test.QATests
         {
             Console.WriteLine("Logining...");
             Helper.FindElement("//*[@class=\"content__button\"]").JsClick();
+            Helper.Delay(2);
 
-            Helper.Delay(5);
             Helper.FindElement("//*[@id='divLinkButton1']/a/table/tbody/tr/td[2]/span").JsClick();
+            Helper.Delay(5);
+
+            Console.WriteLine("Set ACSK Type...");
+            Helper.SetValueForDropdown("//*[@id=\"CAsServersSelect\"]", "АЦСК ТОВ \"Центр сертифікації ключів \"Україна\"");
+            Helper.FindElement("//*[@id=\"PKeySelectFileButton\"]").JsClick();
+            Helper.Delay(5);
+            Console.WriteLine("Uploading file...");
+            SendKeys.SendWait(ECPPath);
+            SendKeys.SendWait(@"{Enter}");
+   
+            Helper.FindElement("//*[@id=\"PKeyPassword\"]").SendKeys(Password);
+            Helper.FindElement("//*[@id=\"PKeyReadButton\"]").JsClick();
 
             Helper.Delay(5);
-            Helper.SetValueForDropdown("//*[@id='CAsServersSelect']", "АЦСК");
-            //Helper.FindElement("//*[@id='PKeyFileName']").SendKeys(ECPPath);
-            //Helper.FindElement("//*[@id='PKeyPassword']").SendKeys(Password);
-            Helper.Delay(20);
-                
+            Helper.FindElement("/html/body/div/div[1]/div[2]/div[2]/div[2]/a").JsClick();
 
-
-
-            //Helper.FindElement("//*[@id=\"UserName\"]").EnterText(login);
-            //Helper.FindElement("//*[@id=\"Password\"]").EnterText(password);
-            //Helper.FindElement("//*[@id=\"loginform\"]/div[3]/button").JsClick();
+            Helper.Delay(5);
             Console.WriteLine("Logged in");
         }
 

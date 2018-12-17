@@ -68,14 +68,19 @@ namespace App.Test.Helpers
 
         public void SetValueForDropdown(string element, string value)
         {
-            var dropdown = FindElement(element);
-            foreach (var ch in value.ToCharArray().Select((elem, index) => new { Elem = elem, Index = index }))
-            {
-                dropdown.EnterText(ch.Elem.ToString());
-                Thread.Sleep(500);
-            }
+            var selectElement = new SelectElement(FindElement(element));
+            selectElement.SelectByText(value);
+            //selectElement.SelectByValue(value);
+        }
+
+        public void SetValueForDisabledDropdown(string element, string value)
+        {
             var liXpath = GetCorrectXpathForDropdownElement(element);
             FindElement(liXpath).Click();
+
+            var dropdown = FindElement(element);
+            dropdown.SendKeys(value);
+
             Thread.Sleep(1000);
         }
 
@@ -109,11 +114,6 @@ namespace App.Test.Helpers
                     FindElement("Реєстр документів", SelectorType.LinkText).JsClick();
                     break;
             }
-        }
-
-        public void UploadFile()
-        {
-            
         }
 
         public void Confirm(bool accept)
