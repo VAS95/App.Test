@@ -96,22 +96,22 @@ namespace App.Test.Helpers
             switch (categoryTab)
             {
                 case CategoryTab.Main:
-                    FindElement("Головна", SelectorType.LinkText).JsClick();
+                    FindElement("/html/body/div[2]/div[1]/aside/ul/li[1]/a", SelectorType.XPath).JsClick();
                     break;
                 case CategoryTab.Submition:
-                    FindElement("Подання заяв", SelectorType.LinkText).JsClick();
+                    FindElement("/html/body/div[2]/div[1]/aside/ul/li[2]/a", SelectorType.XPath).JsClick();
                     break;
                 case CategoryTab.Monitoring:
-                    FindElement("Моніторинг розгляду заяв", SelectorType.LinkText).JsClick();
+                    FindElement("/html/body/div[2]/div[1]/aside/ul/li[3]/a", SelectorType.XPath).JsClick();
                     break;
                 case CategoryTab.Messages:
-                    FindElement("Повідомлення", SelectorType.LinkText).JsClick();
+                    FindElement("/html/body/div[2]/div[1]/aside/ul/li[4]/a", SelectorType.XPath).JsClick();
                     break;
                 case CategoryTab.VksResult:
-                    FindElement("Звіт про результати ВКС", SelectorType.LinkText).JsClick();
+                    FindElement("/html/body/div[2]/div[1]/aside/ul/li[5]/a", SelectorType.XPath).JsClick();
                     break;
                 case CategoryTab.Register:
-                    FindElement("Реєстр документів", SelectorType.LinkText).JsClick();
+                    FindElement("/html/body/div[2]/div[1]/aside/ul/li[6]/a", SelectorType.XPath).JsClick();
                     break;
             }
         }

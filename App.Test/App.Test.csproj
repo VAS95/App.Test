@@ -89,6 +89,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QATests\LoginPageTest.cs" />
+    <Compile Include="QATests\Manufacture\LicenseObtainApplicationCRUD.cs" />
     <Compile Include="QATests\QATestBase.cs" />
   </ItemGroup>
   <ItemGroup>

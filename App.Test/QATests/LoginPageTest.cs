@@ -18,11 +18,11 @@ namespace App.Test.QATests
             var сurrentUserName = Helper.FindElement("/html/body/div[2]/div[1]/aside/footer/a[1]/span").Text;
             Console.WriteLine("Current user name is {CurrentUserName}");
 
-            TestResult.Equals(сurrentUserName, loggedInName);
+            TestResult.IsElementExist("/html/body/div[2]/div[1]/aside/footer/a[1]/span");
         }
 
         [Test]
-        public void Logout()
+        public void Scenario_Logout()
         {
             Login();
             Helper.Delay(5);

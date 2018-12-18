@@ -28,7 +28,7 @@ namespace App.Test.POM
         [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div[1]/aside/ul/li[1]/a")]
         private IWebElement HrefMain { get; set; }
 
-        [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div[1]/aside/ul/li[2]/a")]
+        [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div[1]/aside/ul/li[1]/a")]
         private IWebElement HrefSubmition { get; set; }
 
         [FindsBy(How = How.XPath, Using = "/html/body/div[2]/div[1]/aside/ul/li[3]/a")]
@@ -51,22 +51,22 @@ namespace App.Test.POM
             switch (moddiCategories)
             {
                 case ModdiCategories.Main:
-                    HrefMain.JsClick();
+                    HrefMain.Click();
                     return  new MainCategoryPageObject();
                 case ModdiCategories.Submition:
-                    HrefSubmition.JsClick();
+                    HrefSubmition.Click();
                     return new SubmitionCategoryPageObject();
                 case ModdiCategories.Monitoring:
-                    HrefMonitoring.JsClick();
+                    HrefMonitoring.Click();
                     return new SubmitionCategoryPageObject();
                 case ModdiCategories.Messages:
-                    HrefMessages.JsClick();
+                    HrefMessages.Click();
                     return new MessagesCategoryPageObject();
                 case ModdiCategories.VksResult:
-                    HrefVksResult.JsClick();
+                    HrefVksResult.Click();
                     return  new VksResultCategoryPageObject();
                 case ModdiCategories.Register:
-                    HrefRegister.JsClick();
+                    HrefRegister.Click();
                     return  new RegisterCategoryPageObject();
                 default:
                     throw new NotFoundException("The category doesn't exist");

@@ -46,7 +46,7 @@ namespace App.Test.QATests
             Helper.Delay(2);
 
             Helper.FindElement("//*[@id='divLinkButton1']/a/table/tbody/tr/td[2]/span").JsClick();
-            Helper.Delay(5);
+            Helper.Delay(20);
 
             Console.WriteLine("Set ACSK Type...");
             Helper.SetValueForDropdown("//*[@id=\"CAsServersSelect\"]", "АЦСК ТОВ \"Центр сертифікації ключів \"Україна\"");
