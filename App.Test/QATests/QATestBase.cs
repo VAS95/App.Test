@@ -42,24 +42,28 @@ namespace App.Test.QATests
         protected void Login()
         {
             Console.WriteLine("Logining...");
+            Console.WriteLine("Press SingIn bitton on Home/Info page");
             Helper.FindElement("//*[@class=\"content__button\"]").JsClick();
             Helper.Delay(2);
 
-            Helper.FindElement("//*[@id='divLinkButton1']/a/table/tbody/tr/td[2]/span").JsClick();
+            Console.WriteLine("Press file storage button on id.gov.ua");
+            Helper.FindElement("/html/body/div/main/div/div/div[1]/div[1]/a").JsClick();
             Helper.Delay(20);
 
-            Console.WriteLine("Set ACSK Type...");
+            Console.WriteLine("Set ACSK Type");
             Helper.SetValueForDropdown("//*[@id=\"CAsServersSelect\"]", "АЦСК ТОВ \"Центр сертифікації ключів \"Україна\"");
-            Helper.FindElement("//*[@id=\"PKeySelectFileButton\"]").JsClick();
+            Helper.FindElement("//*[@id=\"PKeyFileInput\"]").JsClick();
             Helper.Delay(5);
-            Console.WriteLine("Uploading file...");
+            Console.WriteLine("Uploading ECP file");
             SendKeys.SendWait(ECPPath);
             SendKeys.SendWait(@"{Enter}");
    
+            Console.WriteLine("Enter password");
             Helper.FindElement("//*[@id=\"PKeyPassword\"]").SendKeys(Password);
-            Helper.FindElement("//*[@id=\"PKeyReadButton\"]").JsClick();
+            Helper.FindElement("/html/body/div[1]/main/div/form/fieldset/div[3]/div/div[2]/div/button").JsClick();
 
             Helper.Delay(5);
+            Console.WriteLine("Press sign in button on id.gov.ua");
             Helper.FindElement("/html/body/div/div[1]/div[2]/div[2]/div[2]/a").JsClick();
 
             Helper.Delay(5);

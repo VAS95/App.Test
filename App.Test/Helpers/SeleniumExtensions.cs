@@ -28,5 +28,11 @@ namespace App.Test.Helpers
             IJavaScriptExecutor jsExec = (IJavaScriptExecutor)SeleniumPropertiesCollection.Driver;
             jsExec.ExecuteScript("arguments[0].click();", element);
         }
+
+        public static void SetValue(this IWebElement webElement, long val)
+        {
+            IJavaScriptExecutor jsExec = (IJavaScriptExecutor) SeleniumPropertiesCollection.Driver;
+            jsExec.ExecuteScript("$(arguments[0]).val(" + val + ");", webElement);
+        }
     }
 }

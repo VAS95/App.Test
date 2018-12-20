@@ -73,16 +73,6 @@ namespace App.Test.Helpers
             //selectElement.SelectByValue(value);
         }
 
-        public void SetValueForDisabledDropdown(string element, string value)
-        {
-            var liXpath = GetCorrectXpathForDropdownElement(element);
-            FindElement(liXpath).Click();
-
-            var dropdown = FindElement(element);
-            dropdown.SendKeys(value);
-
-            Thread.Sleep(1000);
-        }
 
         private string GetCorrectXpathForDropdownElement(string element)
         {
